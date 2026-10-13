@@ -1,8 +1,14 @@
-# Mi Air
+# 小米空调mac状态栏控制器
 
 一个轻巧的 macOS 菜单栏米家空调控制器。SwiftUI 原生面板，Rust 通信核心，无 Python、Node.js 或后台服务器依赖。
 
 > 开发中的 0.1 版本。当前只开放 `xiaomi.aircondition.c16`，不保证其他型号可用。尚未发布签名、公证的安装包。
+
+## 实机截图
+
+<img src="docs/images/controller.png" alt="小米空调mac状态栏控制器实机界面" width="460">
+
+已连接空调的实际运行界面。
 
 ## 使用
 
@@ -24,7 +30,7 @@
 
 ```sh
 ./build.sh
-open 'build/Mi Air.app'
+open 'build/小米空调mac状态栏控制器.app'
 ```
 
 构建输出为本机 ad-hoc 签名应用，不等于 Apple Developer ID 签名或公证。首次启动时若系统要求本地网络或钥匙串授权，需要允许才能连接。当前脚本仅构建 ARM64，不支持 Intel 构建产物。

@@ -223,7 +223,7 @@ struct Panel: View {
     HStack {TextField("空调 IP",text:$m.address);Button("验证并保存") {m.updateAddress()}.disabled(m.busy || m.pairing)}
     Text("地址变化时可重新扫码，或填写米家中的最新 IP。").font(.caption).foregroundStyle(muted)
    }
-   Divider();HStack {Text("Mi Air · 0.1").font(.caption).foregroundStyle(muted);Spacer();Button("退出应用"){NSApplication.shared.terminate(nil)}}
+   Divider();HStack {Text("小米空调mac状态栏控制器 · 0.1").font(.caption).foregroundStyle(muted);Spacer();Button("退出应用"){NSApplication.shared.terminate(nil)}}
   }.textFieldStyle(.roundedBorder)
  }
  func roundButton(_ icon:String,_ title:String,action:@escaping()->Void)->some View {Button(action:action){Image(systemName:icon).font(.system(size:17)).frame(width:34,height:38).background(.white.opacity(0.035),in:RoundedRectangle(cornerRadius:12))}.buttonStyle(PressStyle()).disabled(!m.online || m.busy).accessibilityLabel(title)}

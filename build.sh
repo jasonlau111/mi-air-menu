@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 cargo build --release --locked --manifest-path core/Cargo.toml
-APP="$PWD/build/Mi Air.app"
+APP="$PWD/build/小米空调mac状态栏控制器.app"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 xcrun swiftc -swift-version 6 -O -target arm64-apple-macosx14.0 Sources/*.swift -o "$APP/Contents/MacOS/MiAir" -framework SwiftUI -framework AppKit -framework Security
 cp LICENSE "$APP/Contents/Resources/LICENSE"
@@ -13,7 +13,8 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
 <key>CFBundleIdentifier</key><string>app.miair.menu</string>
-<key>CFBundleName</key><string>Mi Air</string>
+<key>CFBundleName</key><string>小米空调mac状态栏控制器</string>
+<key>CFBundleDisplayName</key><string>小米空调mac状态栏控制器</string>
 <key>CFBundleExecutable</key><string>MiAir</string>
 <key>CFBundleVersion</key><string>1</string>
 <key>CFBundleShortVersionString</key><string>0.1.0</string>
